@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+
+        <div id="intro-title">
+            <h1>Free Dev Survey Form</h1>
+            <p>Obrigado por utilizar nosso formulário</p>
+        </div>
+
+        <section id="form-container">
+            <form action="" method="post" autocomplete="on">
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+
+                <label for="idade">Idade <sup>(opcional)</sup> </label>
+                <input type="number" name="idade" id="idade">
+
+                <span>
+                    Qual opção melhor descreve sua função atual?
+                </span>
+                <!-- input de lista -->
+
+                <span>
+                    Você recomendaria nossos serviços a um amigo?
+                </span>
+                <input type="radio" name="recommend_opt" id="definitely" checked>Definitivamente
+                <input type="radio" name="recommend_opt" id="maybe">Talvez
+                <input type="radio" name="recommend_opt" id="not_sure">Não tenho certeza
+
+                <span>
+                    Qual é o seu recurso favorito?
+                </span>
+                <!-- input de lista -->
+
+                <span>
+                    O que você gostaria de ver melhorado? <sup>(Marque todos os que se aplicam)</sup>
+                </span>
+                <input type="checkbox" name="front_end_projects" id="front_end_projects">Projetos Front-end
+                <input type="checkbox" name="back_end_projects" id="back_end_projects">Projetos Back-end
+                <input type="checkbox" name="data_visualization" id="data_visualization">Visualização de dados
+                <input type="checkbox" name="challenges" id="challenges">Desafios
+                <input type="checkbox" name="community_open_source" id="community_open_source">Comunidade Open
+                Source
+                <input type="checkbox" name="gitter_help_rooms" id="gitter_help_rooms">Salas de ajuda do Gitter
+                <input type="checkbox" name="videos" id="videos">Vídeos
+                <input type="checkbox" name="city_meetups" id="city_meetups">Encontros da cidade
+                <input type="checkbox" name="wiki" id="wiki">Wiki
+                <input type="checkbox" name="forum" id="forum">Fórum
+                <input type="checkbox" name="additional_courses" id="additional_courses">Cursos adicionais
+
+                <span>
+                    Algum comentário ou sugestão?
+                </span>
+                <textarea name="comment" id="comment"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
