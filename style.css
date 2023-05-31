@@ -2,15 +2,160 @@
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 
+:root {
+    --color-white: #f3f3f3;
+    --color-darkBlue: #1c1a36;
+    --color-darkBlue-alpha: rgba(27, 27, 50, 0.8);
+    --color-blue: #1e90ff;
+    --font-Poppins: "Poppins", sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --color-white: #f3f3f3;
-    --color-darkBlue: #1c1a36;
-    --color-blue: #1e90ff;
-    --font-family: "Poppins", sans-serif;
+::placeholder {
+    color: #aaaaaa;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 2px solid transparent;
+    -webkit-text-fill-color: var(--color-white) !important;
+    -webkit-box-shadow: 0 0 0px 1000px #1c1a36 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+body {
+    font-family: var(--font-Poppins);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-white);
+    z-index: -1;
+    background: var(--color-darkBlue);
+    background-image: linear-gradient(
+            115deg,
+            rgba(58, 58, 158, 0.8),
+            rgba(136, 136, 206, 0.7)
+        ),
+        url(img/mahdi-bafande-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.header p {
+    margin-top: 5px;
+    font-size: 1.25em;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.25em;
+    margin-bottom: 8px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+section {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+form {
+    background: var(--color-darkBlue-alpha);
+    padding: 32px 16px;
+    border-radius: 15px;
+}
+
+.form-group {
+    margin: 0 auto 20px auto;
+    padding: 4px;
+}
+
+.form-control,
+.input-textarea {
+    display: block;
+    width: 100%;
+    min-height: 55px;
+    padding: 6px 12px;
+    border-radius: 12px;
+    color: #aaaaaa;
+    background-color: #1c1a36;
+    outline: none;
+    border: 2px solid transparent;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus,
+.form-control:hover,
+.input-textarea:hover,
+.input-textarea:focus {
+    border: 2px solid var(--color-blue);
+    box-shadow: 0 0 0 4px #092a4b;
+}
+
+.input-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.input-radio,
+.input-checkbox {
+    display: inline-block;
+    margin-right: 8px;
+    min-height: 15px;
+    min-width: 15px;
+}
+
+.submit-button {
+    background: #1e90ff;
+    color: var(--color-white);
+    font-size: 1.25em;
+    border: 2px solid transparent;
+    outline: none;
+    width: 100%;
+    height: 60px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+    position: relative;
+    top: -2px;
+    left: -2px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid #fff;
 }
