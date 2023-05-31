@@ -88,8 +88,14 @@ button {
 }
 
 section {
-    max-width: 90%;
+    max-width: 720px;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+    section {
+        max-width: 95%;
+    }
 }
 
 form {
