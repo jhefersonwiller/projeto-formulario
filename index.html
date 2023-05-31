@@ -12,63 +12,122 @@
 <body>
     <main>
 
-        <div id="intro-title">
+        <header class="header">
             <h1>Free Dev Survey Form</h1>
             <p>Obrigado por utilizar nosso formulário</p>
-        </div>
+        </header>
 
-        <section id="form-container">
+        <section>
             <form action="" method="post" autocomplete="on">
-                <label for="name">Nome</label>
-                <input type="text" name="name" id="name">
 
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" autocomplete="name" required class="form-control">
+                </div>
 
-                <label for="idade">Idade <sup>(opcional)</sup> </label>
-                <input type="number" name="idade" id="idade">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" autocomplete="email" required class="form-control">
+                </div>
 
-                <span>
-                    Qual opção melhor descreve sua função atual?
-                </span>
-                <!-- input de lista -->
+                <div class="form-group">
+                    <label for="age">Idade <span>(Opcional)</span></label>
+                    <input type="number" name="age" id="age" class="form-control">
+                </div>
 
-                <span>
-                    Você recomendaria nossos serviços a um amigo?
-                </span>
-                <input type="radio" name="recommend_opt" id="definitely" checked>Definitivamente
-                <input type="radio" name="recommend_opt" id="maybe">Talvez
-                <input type="radio" name="recommend_opt" id="not_sure">Não tenho certeza
+                <div class="form-group">
+                    <p>Qual opção melhor descreve sua atual função?</p>
+                    <select name="role" id="dropdown" required class="form-control">
+                        <option disabled selected value="">Selecione sua atual função</option>
+                        <option value="student">Estudante</option>
+                        <option value="job">Trabalho em tempo integral</option>
+                        <option value="learner">Aluno</option>
+                        <option value="preferNo">Prefiro não dizer</option>
+                        <option value="other">Outro</option>
+                    </select>
+                </div>
 
-                <span>
-                    Qual é o seu recurso favorito?
-                </span>
-                <!-- input de lista -->
+                <div class="form-group">
+                    <p>Recomendaria nossos serviços a um amigo?</p>
+                    <label>
+                        <input type="radio" name="user_recommend" value="definitely" class="input-radio"
+                            checked>Definitivamente
+                    </label>
+                    <label>
+                        <input type="radio" name="user_recommend" value="maybe" class="input-radio">Talvez
+                    </label>
+                    <label>
+                        <input type="radio" name="user_recommend" value="notSure" class="input-radio">Não tenho certeza
+                    </label>
+                </div>
 
-                <span>
-                    O que você gostaria de ver melhorado? <sup>(Marque todos os que se aplicam)</sup>
-                </span>
-                <input type="checkbox" name="front_end_projects" id="front_end_projects">Projetos Front-end
-                <input type="checkbox" name="back_end_projects" id="back_end_projects">Projetos Back-end
-                <input type="checkbox" name="data_visualization" id="data_visualization">Visualização de dados
-                <input type="checkbox" name="challenges" id="challenges">Desafios
-                <input type="checkbox" name="community_open_source" id="community_open_source">Comunidade Open
-                Source
-                <input type="checkbox" name="gitter_help_rooms" id="gitter_help_rooms">Salas de ajuda do Gitter
-                <input type="checkbox" name="videos" id="videos">Vídeos
-                <input type="checkbox" name="city_meetups" id="city_meetups">Encontros da cidade
-                <input type="checkbox" name="wiki" id="wiki">Wiki
-                <input type="checkbox" name="forum" id="forum">Fórum
-                <input type="checkbox" name="additional_courses" id="additional_courses">Cursos adicionais
+                <div class="form-group">
+                    <p>Qual é o seu recurso favorito?</p>
+                    <select name="mostLike" id="most-like" required class="form-control">
+                        <option disabled selected value="">Selecione uma opção</option>
+                        <option value="challenges">Desafios</option>
+                        <option value="projects">Projetos</option>
+                        <option value="community">Comunidade</option>
+                        <option value="openSource">Open Source</option>
+                    </select>
+                </div>
 
-                <span>
-                    Algum comentário ou sugestão?
-                </span>
-                <textarea name="comment" id="comment"></textarea>
+                <div class="form-group">
+                    <p>O que gostaria de ver melhorado?<span>(Marque quantas desejar)</span></p>
+                    <label>
+                        <input type="checkbox" name="prefer" value="front-end-projects" class="input-checkbox">Projetos
+                        Front-end
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" value="back-end-projects" class="input-checkbox">Projetos
+                        Back-end
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" value="data-visualization"
+                            class="input-checkbox">Visualização de dados
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" value="challenges" class="input-checkbox">Desafios
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" value="open-source-community"
+                            class="input-checkbox">Comunidade Open Source
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" value="gitter-help-rooms" class="input-checkbox">Sala de
+                        ajuda do Gitter
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" value="videos" class="input-checkbox">Vídeos
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" value="city-meetups" class="input-checkbox">Encontros na
+                        cidade
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" value="wiki" class="input-checkbox">Wiki
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" value="forum" class="input-checkbox">Fórum
+                    </label>
+                    <label>
+                        <input type="checkbox" name="prefer" value="additional-courses" class="input-checkbox">Cursos
+                        adicionais
+                    </label>
+                </div>
 
-                <button type="submit">Enviar</button>
+                <div class="form-group">
+                    <p>Algum comentário ou sugestão?</p>
+                    <textarea name="comment" id="comments" class="input-textarea"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">Enviar</button>
+                </div>
+
             </form>
         </section>
+
     </main>
 </body>
 
