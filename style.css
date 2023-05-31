@@ -1,7 +1,16 @@
 @charset "UTF-8";
 
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --color-white: #f3f3f3;
+    --color-darkBlue: #1c1a36;
+    --color-blue: #1e90ff;
+    --font-family: "Poppins", sans-serif;
 }
